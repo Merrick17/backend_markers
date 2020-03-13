@@ -36,7 +36,7 @@ const verifToken = require("../config/verifToken");
  *              schema:
  *                $ref: '#/components/schemas/Truck'
  */
-router.post("/add", truckController.addTruck);
+router.post("/add",verifToken, truckController.addTruck);
 
 /**
  * @swagger
@@ -63,7 +63,7 @@ router.post("/add", truckController.addTruck);
  *       '404':
  *         description: Not Found
  */
-router.delete("/delete/:id", truckController.deleteTruck);
+router.delete("/delete/:id",verifToken, truckController.deleteTruck);
 
 /**
  * @swagger
@@ -85,6 +85,6 @@ router.delete("/delete/:id", truckController.deleteTruck);
  *                 type: string
  *               $ref: '#/components/schemas/Truck'
  */
-router.get("/all", truckController.getAllTrucks);
+router.get("/all",verifToken, truckController.getAllTrucks);
 
 module.exports = router;

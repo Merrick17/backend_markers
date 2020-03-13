@@ -24,8 +24,8 @@ module.exports.deleteTruck = (req, res) => {
 
 module.exports.getAllTrucks = (req, res) => {
   Truck.find()
-    .populate("User")
+    .populate('User')
     .then(data => {
-      res.json({ data: data });
+      res.json({ result: data });
     });
 };

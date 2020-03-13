@@ -20,7 +20,7 @@ module.exports.addBin = (req, res) => {
 };
 
 module.exports.getAllBins = (req, res) => {
-  Bin.find().then(data => {
+  Bin.find().populate('Cluster').then(data => {
     res.json({ result: data });
   });
 };

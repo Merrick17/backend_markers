@@ -126,6 +126,6 @@ router.delete("/delete/:id",verifToken, ClusterController.removeCluster);
  *       '404':
  *         description: Not Found
  */
-router.get("/", ClusterController.getAllClusters);
+router.get("/",verifToken, ClusterController.getAllClusters);
 
 module.exports = router;

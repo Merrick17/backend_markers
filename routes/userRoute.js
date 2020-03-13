@@ -107,7 +107,7 @@ router.post("/login", userController.loginUser);
  *       '404':
  *         description: Not Found
  */
-router.delete("/delete/:id", userController.deleteUser);4
+router.delete("/delete/:id",verifToken, userController.deleteUser);4
 
 /**
  * @swagger
@@ -137,7 +137,7 @@ router.delete("/delete/:id", userController.deleteUser);4
  *       '404':
  *         description: Not Found
  */
-router.get("/:type", userController.findAllByType);
+router.get("/:type",verifToken, userController.findAllByType);
 
 /**
  * @swagger
@@ -177,6 +177,6 @@ router.get("/:type", userController.findAllByType);
  *       '405':
  *         description: Invalid data
  */
-router.put("/:id", userController.updateUser);
+router.put("/:id",verifToken, userController.updateUser);
 
 module.exports = router;
