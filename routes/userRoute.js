@@ -35,7 +35,7 @@ const verifToken = require("../config/verifToken");
  *              schema:
  *                $ref: '#/components/schemas/User'
  */
-router.post("/adduser",  userController.addUser);
+router.post("/adduser",verifToken,  userController.addUser);
 //router.get('/map',verifToken,userController.findAllassiggnedBins);
 
 /**
