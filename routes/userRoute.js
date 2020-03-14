@@ -52,7 +52,7 @@ router.post("/adduser",verifToken,  userController.addUser);
  *       - application/json
  *      tags: [User]
  *      parameters:
- *      - name: authid
+ *      - name: auth_id
  *        in: path
  *        description: username for login
  *        required: true
