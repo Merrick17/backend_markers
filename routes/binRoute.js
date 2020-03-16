@@ -35,7 +35,7 @@ const binController = require("../controllers/binController");
  *              schema:
  *                $ref: '#/components/schemas/Bin'
  */
-router.post("/add",verifToken, binController.addBin);
+router.post("/add", binController.addBin);
 /**
  * @swagger
  * /bin:

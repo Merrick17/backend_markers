@@ -9,7 +9,7 @@ module.exports.addBin = (req, res) => {
   const newBin = Bin({
     type: req.body.type,
     serviceTime: req.body.serviceTime,
-    numberInposition: req.body.NumberInposition,
+    NumberInposition: req.body.numberInposition,
     Cluster: req.body.clusterid,
     lat:req.body.lat,
     lng:req.body.lng
