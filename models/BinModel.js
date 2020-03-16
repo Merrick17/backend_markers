@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
  *      Bin:
  *        type: object
  *        required:
- *          - nbrInposition
+ *          - NumberInposition
  *          - Cluster
  *          - lat
  *          - lng
@@ -18,7 +18,7 @@ const mongoose = require("mongoose");
  *          serviceTime:
  *            type: string
  *            description: How much the bin works
- *          nbrInposition:
+ *          NumberInposition:
  *            type: string
  *          clusterid:
  *            type: string
